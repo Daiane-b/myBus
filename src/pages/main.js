@@ -1,12 +1,23 @@
 import React, {Component} from 'react';
-import {View, Text, FlatList, TouchableOpacity, StyleSheet, TextInput} from 'react-native'
+import {View, Text, StyleSheet, TextInput} from 'react-native'
 
 export default class Main extends Component{
     render(){
         return(
-                    <TextInput
-                    placeholder="Vai para onde?"
-                    onChangeText={() => {}}/>
+            <View style={styles.container}>
+            <TextInput
+            style={{height: 40}}
+            placeholder="Vai para onde?"
+            onChangeText={() => {}}
+        />
+            </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    container:{
+        flex: 1,
+        backgroundColor: "#fafafa",
+    }
+})
